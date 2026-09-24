@@ -1,0 +1,102 @@
+{
+  "version": 1,
+  "vigente_desde": "2026-01-01",
+  "verificado": false,
+  "fuente": "https://www.sri.gob.ec",
+  "dias_por_digito": {
+    "1": 10, "2": 12, "3": 14, "4": 16, "5": 18,
+    "6": 20, "7": 22, "8": 24, "9": 26, "0": 28
+  },
+  "feriados": [
+    "2026-01-01",
+    "2026-02-16",
+    "2026-02-17",
+    "2026-04-03",
+    "2026-05-01",
+    "2026-05-25",
+    "2026-08-10",
+    "2026-10-09",
+    "2026-11-02",
+    "2026-11-03",
+    "2026-12-25",
+    "2027-01-01"
+  ],
+  "obligaciones": [
+    {
+      "id": "renta_rimpe_np",
+      "regimen": "negocio_popular",
+      "tipo_contribuyente": "persona_natural",
+      "impuesto": "renta",
+      "periodicidad": "anual",
+      "mes": 5,
+      "anio_offset": 1
+    },
+    {
+      "id": "renta_rimpe_emp_pn",
+      "regimen": "emprendedor",
+      "tipo_contribuyente": "persona_natural",
+      "impuesto": "renta",
+      "periodicidad": "anual",
+      "mes": 5,
+      "anio_offset": 1
+    },
+    {
+      "id": "renta_rimpe_emp_soc",
+      "regimen": "emprendedor",
+      "tipo_contribuyente": "sociedad",
+      "impuesto": "renta",
+      "periodicidad": "anual",
+      "mes": 4,
+      "anio_offset": 1
+    },
+    {
+      "id": "renta_general_pn",
+      "regimen": "general",
+      "tipo_contribuyente": "persona_natural",
+      "impuesto": "renta",
+      "periodicidad": "anual",
+      "mes": 3,
+      "anio_offset": 1
+    },
+    {
+      "id": "renta_general_soc",
+      "regimen": "general",
+      "tipo_contribuyente": "sociedad",
+      "impuesto": "renta",
+      "periodicidad": "anual",
+      "mes": 4,
+      "anio_offset": 1
+    },
+    {
+      "id": "iva_semestral_s1",
+      "regimen": "emprendedor",
+      "impuesto": "iva",
+      "periodicidad": "semestral",
+      "mes": 7,
+      "periodo": "S1"
+    },
+    {
+      "id": "iva_semestral_s2",
+      "regimen": "emprendedor",
+      "impuesto": "iva",
+      "periodicidad": "semestral",
+      "mes": 1,
+      "periodo": "S2",
+      "anio_offset": 1
+    },
+    {
+      "id": "iva_mensual",
+      "regimen": ["general", "emprendedor"],
+      "impuesto": "iva",
+      "periodicidad": "mensual"
+    }
+  ],
+  "avisos": [
+    {
+      "id": "revisar_regimen",
+      "mes": 1,
+      "dia": 15,
+      "texto": "Verifica tu régimen en SRI en Línea; puede haber cambiado."
+    }
+  ]
+}
