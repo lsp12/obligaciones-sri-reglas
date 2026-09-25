@@ -1,11 +1,19 @@
 {
-  "version": 4,
+  "version": 5,
   "vigente_desde": "2026-01-01",
   "verificado": false,
   "fuente": "https://www.sri.gob.ec",
   "dias_por_digito": {
-    "1": 10, "2": 12, "3": 14, "4": 16, "5": 18,
-    "6": 20, "7": 22, "8": 24, "9": 26, "0": 28
+    "1": 10,
+    "2": 12,
+    "3": 14,
+    "4": 16,
+    "5": 18,
+    "6": 20,
+    "7": 22,
+    "8": 24,
+    "9": 26,
+    "0": 28
   },
   "feriados": [
     "2026-01-01",
@@ -93,7 +101,10 @@
     },
     {
       "id": "iva_mensual",
-      "regimen": ["general", "emprendedor"],
+      "regimen": [
+        "general",
+        "emprendedor"
+      ],
       "impuesto": "iva",
       "periodicidad": "mensual",
       "guia": "iva"
@@ -166,6 +177,89 @@
         "Guarda el comprobante y marca la obligación como cumplida en la app."
       ],
       "url": "https://srienlinea.sri.gob.ec"
+    },
+    "retenciones": {
+      "titulo": "Cómo declarar las retenciones",
+      "formulario": "Formulario 103 (retenciones en la fuente)",
+      "documentos": [
+        "Comprobantes de retención emitidos en el periodo",
+        "Detalle de pagos a proveedores y sus porcentajes de retención"
+      ],
+      "pasos": [
+        "Ingresa a SRI en Línea con el RUC y la clave del contribuyente.",
+        "Entra a declaraciones y elige el formulario de retenciones en la fuente.",
+        "Selecciona el periodo y registra las bases y valores retenidos.",
+        "Envía la declaración y paga el valor retenido antes del vencimiento."
+      ],
+      "url": "https://srienlinea.sri.gob.ec"
+    },
+    "ats": {
+      "titulo": "Cómo presentar el ATS",
+      "formulario": "Anexo Transaccional Simplificado",
+      "documentos": [
+        "Compras, ventas y retenciones del mes",
+        "Archivo XML generado por tu sistema contable o el DIMM Anexos"
+      ],
+      "pasos": [
+        "Genera el archivo del ATS del periodo (sistema contable o DIMM).",
+        "Ingresa a SRI en Línea y entra a la opción de anexos.",
+        "Carga el archivo, revisa la validación y envíalo.",
+        "Guarda el comprobante de recepción."
+      ],
+      "url": "https://srienlinea.sri.gob.ec"
+    },
+    "rdep": {
+      "titulo": "Cómo presentar el RDEP",
+      "formulario": "Anexo de retenciones bajo relación de dependencia",
+      "documentos": [
+        "Sueldos, beneficios y retenciones de cada trabajador del año",
+        "Proyecciones de gastos personales entregadas por los trabajadores"
+      ],
+      "pasos": [
+        "Entrega a cada trabajador su formulario 107 en enero.",
+        "Genera el archivo del RDEP con tu sistema de nómina o el DIMM.",
+        "Ingresa a SRI en Línea, entra a anexos y carga el archivo.",
+        "Guarda el comprobante de recepción."
+      ],
+      "url": "https://srienlinea.sri.gob.ec"
+    },
+    "anexos": {
+      "titulo": "Cómo presentar el anexo",
+      "documentos": [
+        "Información de socios o accionistas al 31 de diciembre"
+      ],
+      "pasos": [
+        "Ingresa a SRI en Línea con el RUC de la sociedad.",
+        "Entra a la opción de anexos y elige el anexo correspondiente.",
+        "Registra o carga la información y envíala."
+      ],
+      "url": "https://srienlinea.sri.gob.ec"
+    },
+    "supercias": {
+      "titulo": "Cómo cumplir con la Supercias",
+      "documentos": [
+        "Estados financieros del ejercicio",
+        "Informes de gerente y comisario, y nómina de accionistas"
+      ],
+      "pasos": [
+        "Ingresa al portal de la Superintendencia de Compañías.",
+        "Carga los estados financieros y los documentos requeridos.",
+        "Guarda el comprobante de envío."
+      ],
+      "url": "https://www.supercias.gob.ec",
+      "boton": "Abrir el portal de la Supercias"
+    },
+    "laboral": {
+      "titulo": "Cómo cumplir esta obligación laboral",
+      "documentos": [
+        "Nómina de trabajadores y valores a pagar"
+      ],
+      "pasos": [
+        "Paga a cada trabajador hasta la fecha límite.",
+        "Registra el pago en el Sistema Único de Trabajo (SUT) del Ministerio del Trabajo en las fechas que publique cada año."
+      ],
+      "url": "https://sut.trabajo.gob.ec",
+      "boton": "Abrir el SUT (Ministerio del Trabajo)"
     }
   },
   "avisos": [
@@ -174,6 +268,174 @@
       "mes": 1,
       "dia": 15,
       "texto": "Verifica tu régimen en SRI en Línea; puede haber cambiado."
+    }
+  ],
+  "obligaciones_por_perfil": [
+    {
+      "id": "retenciones_103",
+      "regimen": [
+        "general"
+      ],
+      "impuesto": "retenciones",
+      "nombre": "Retenciones en la fuente (103)",
+      "periodicidad": "mensual",
+      "requiere": [
+        "agente_retencion"
+      ],
+      "guia": "retenciones"
+    },
+    {
+      "id": "ats",
+      "regimen": [
+        "general",
+        "emprendedor",
+        "negocio_popular"
+      ],
+      "impuesto": "ats",
+      "nombre": "ATS (anexo transaccional)",
+      "periodicidad": "mensual",
+      "requiere": [
+        "ats"
+      ],
+      "guia": "ats"
+    },
+    {
+      "id": "rdep",
+      "regimen": [
+        "general",
+        "emprendedor",
+        "negocio_popular"
+      ],
+      "impuesto": "rdep",
+      "nombre": "Anexo RDEP (empleados)",
+      "periodicidad": "anual",
+      "anio_offset": 1,
+      "fechas_por_digito": {
+        "1": "01-21",
+        "2": "01-23",
+        "3": "01-25",
+        "4": "01-27",
+        "5": "01-29",
+        "6": "01-31",
+        "7": "02-01",
+        "8": "02-03",
+        "9": "02-05",
+        "0": "02-07"
+      },
+      "requiere": [
+        "empleados"
+      ],
+      "fuente": "Resolución NAC-DGERCGC24-00000037",
+      "guia": "rdep"
+    },
+    {
+      "id": "aps",
+      "regimen": [
+        "general",
+        "emprendedor",
+        "negocio_popular"
+      ],
+      "tipo_contribuyente": "sociedad",
+      "impuesto": "aps",
+      "nombre": "Anexo de accionistas (APS)",
+      "periodicidad": "anual",
+      "mes": 2,
+      "anio_offset": 1,
+      "guia": "anexos"
+    },
+    {
+      "id": "supercias_anual",
+      "regimen": [
+        "general",
+        "emprendedor",
+        "negocio_popular"
+      ],
+      "tipo_contribuyente": "sociedad",
+      "impuesto": "supercias",
+      "nombre": "Información anual a la Supercias",
+      "periodicidad": "anual",
+      "fecha_fija": "04-30",
+      "anio_offset": 1,
+      "mover_no_habil": false,
+      "requiere": [
+        "supercias"
+      ],
+      "guia": "supercias"
+    },
+    {
+      "id": "utilidades",
+      "regimen": [
+        "general",
+        "emprendedor",
+        "negocio_popular"
+      ],
+      "impuesto": "utilidades",
+      "nombre": "Pago de utilidades (15 %)",
+      "periodicidad": "anual",
+      "fecha_fija": "04-15",
+      "anio_offset": 1,
+      "mover_no_habil": false,
+      "requiere": [
+        "empleados"
+      ],
+      "fuente": "Código del Trabajo, art. 105",
+      "guia": "laboral"
+    },
+    {
+      "id": "decimo_tercero",
+      "regimen": [
+        "general",
+        "emprendedor",
+        "negocio_popular"
+      ],
+      "impuesto": "decimo_tercero",
+      "nombre": "Décimo tercer sueldo",
+      "periodicidad": "anual",
+      "fecha_fija": "12-20",
+      "mover_no_habil": false,
+      "requiere": [
+        "empleados"
+      ],
+      "fuente": "Código del Trabajo, art. 111",
+      "guia": "laboral"
+    },
+    {
+      "id": "decimo_cuarto_costa",
+      "regimen": [
+        "general",
+        "emprendedor",
+        "negocio_popular"
+      ],
+      "impuesto": "decimo_cuarto",
+      "nombre": "Décimo cuarto sueldo (Costa)",
+      "periodicidad": "anual",
+      "fecha_fija": "03-15",
+      "mover_no_habil": false,
+      "requiere": [
+        "empleados"
+      ],
+      "region": "costa",
+      "fuente": "Código del Trabajo, art. 113",
+      "guia": "laboral"
+    },
+    {
+      "id": "decimo_cuarto_sierra",
+      "regimen": [
+        "general",
+        "emprendedor",
+        "negocio_popular"
+      ],
+      "impuesto": "decimo_cuarto",
+      "nombre": "Décimo cuarto sueldo (Sierra)",
+      "periodicidad": "anual",
+      "fecha_fija": "08-15",
+      "mover_no_habil": false,
+      "requiere": [
+        "empleados"
+      ],
+      "region": "sierra",
+      "fuente": "Código del Trabajo, art. 113",
+      "guia": "laboral"
     }
   ]
 }
