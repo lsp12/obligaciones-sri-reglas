@@ -1,5 +1,5 @@
 {
-  "version": 3,
+  "version": 4,
   "vigente_desde": "2026-01-01",
   "verificado": false,
   "fuente": "https://www.sri.gob.ec",
@@ -29,7 +29,8 @@
       "impuesto": "renta",
       "periodicidad": "anual",
       "mes": 5,
-      "anio_offset": 1
+      "anio_offset": 1,
+      "guia": "renta_negocio_popular"
     },
     {
       "id": "renta_rimpe_emp_pn",
@@ -38,7 +39,8 @@
       "impuesto": "renta",
       "periodicidad": "anual",
       "mes": 5,
-      "anio_offset": 1
+      "anio_offset": 1,
+      "guia": "renta_persona_natural"
     },
     {
       "id": "renta_rimpe_emp_soc",
@@ -47,7 +49,8 @@
       "impuesto": "renta",
       "periodicidad": "anual",
       "mes": 4,
-      "anio_offset": 1
+      "anio_offset": 1,
+      "guia": "renta_sociedad"
     },
     {
       "id": "renta_general_pn",
@@ -56,7 +59,8 @@
       "impuesto": "renta",
       "periodicidad": "anual",
       "mes": 3,
-      "anio_offset": 1
+      "anio_offset": 1,
+      "guia": "renta_persona_natural"
     },
     {
       "id": "renta_general_soc",
@@ -65,7 +69,8 @@
       "impuesto": "renta",
       "periodicidad": "anual",
       "mes": 4,
-      "anio_offset": 1
+      "anio_offset": 1,
+      "guia": "renta_sociedad"
     },
     {
       "id": "iva_semestral_s1",
@@ -73,7 +78,8 @@
       "impuesto": "iva",
       "periodicidad": "semestral",
       "mes": 7,
-      "periodo": "S1"
+      "periodo": "S1",
+      "guia": "iva"
     },
     {
       "id": "iva_semestral_s2",
@@ -82,15 +88,86 @@
       "periodicidad": "semestral",
       "mes": 1,
       "periodo": "S2",
-      "anio_offset": 1
+      "anio_offset": 1,
+      "guia": "iva"
     },
     {
       "id": "iva_mensual",
       "regimen": ["general", "emprendedor"],
       "impuesto": "iva",
-      "periodicidad": "mensual"
+      "periodicidad": "mensual",
+      "guia": "iva"
     }
   ],
+  "guias": {
+    "iva": {
+      "titulo": "Cómo declarar el IVA",
+      "formulario": "Formulario 104 (IVA)",
+      "documentos": [
+        "Facturas de ventas emitidas en el periodo",
+        "Facturas de compras y gastos emitidas a tu RUC",
+        "Comprobantes de retención que te hayan hecho, si los tienes"
+      ],
+      "pasos": [
+        "Ingresa a SRI en Línea con tu RUC y tu clave.",
+        "Entra a la opción de declaraciones y elige el formulario de IVA.",
+        "Selecciona el periodo que vas a declarar.",
+        "Registra tus ventas y compras del periodo y revisa los valores antes de enviar.",
+        "Envía la declaración. Si hay valor a pagar, genera el comprobante y págalo antes del vencimiento.",
+        "Guarda el comprobante y marca la obligación como cumplida en la app."
+      ],
+      "url": "https://srienlinea.sri.gob.ec"
+    },
+    "renta_negocio_popular": {
+      "titulo": "Cómo cumplir con el Impuesto a la Renta (RIMPE Negocio Popular)",
+      "documentos": [
+        "Tu RUC y clave de SRI en Línea",
+        "El total de ingresos de tu negocio en el año"
+      ],
+      "pasos": [
+        "Ingresa a SRI en Línea con tu RUC y tu clave.",
+        "Revisa el valor a pagar que corresponde a tu régimen para el año declarado.",
+        "Declara o genera el comprobante de pago según lo que indique SRI en Línea.",
+        "Paga antes de la fecha de vencimiento.",
+        "Guarda el comprobante y marca la obligación como cumplida en la app."
+      ],
+      "url": "https://srienlinea.sri.gob.ec"
+    },
+    "renta_persona_natural": {
+      "titulo": "Cómo declarar el Impuesto a la Renta (persona natural)",
+      "documentos": [
+        "Facturas de ventas o ingresos del año",
+        "Comprobantes de retención de renta que te hayan hecho",
+        "Facturas de gastos personales, si vas a deducirlos"
+      ],
+      "pasos": [
+        "Ingresa a SRI en Línea con tu RUC y tu clave.",
+        "Entra a la opción de declaraciones y elige el formulario de Impuesto a la Renta de personas naturales.",
+        "Selecciona el año que vas a declarar.",
+        "Registra tus ingresos, gastos y retenciones y revisa el impuesto calculado.",
+        "Envía la declaración. Si hay valor a pagar, genera el comprobante y págalo antes del vencimiento.",
+        "Guarda el comprobante y marca la obligación como cumplida en la app."
+      ],
+      "url": "https://srienlinea.sri.gob.ec"
+    },
+    "renta_sociedad": {
+      "titulo": "Cómo declarar el Impuesto a la Renta (sociedad)",
+      "documentos": [
+        "Estados financieros del año",
+        "Comprobantes de retención de renta recibidos",
+        "Conciliación tributaria preparada por tu contador"
+      ],
+      "pasos": [
+        "Ingresa a SRI en Línea con el RUC de la sociedad y su clave.",
+        "Entra a la opción de declaraciones y elige el formulario de Impuesto a la Renta de sociedades.",
+        "Selecciona el año que vas a declarar.",
+        "Registra la información de los estados financieros y revisa el impuesto calculado.",
+        "Envía la declaración. Si hay valor a pagar, genera el comprobante y págalo antes del vencimiento.",
+        "Guarda el comprobante y marca la obligación como cumplida en la app."
+      ],
+      "url": "https://srienlinea.sri.gob.ec"
+    }
+  },
   "avisos": [
     {
       "id": "revisar_regimen",
