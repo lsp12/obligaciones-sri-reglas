@@ -1,5 +1,5 @@
 {
-  "version": 5,
+  "version": 6,
   "vigente_desde": "2026-01-01",
   "verificado": false,
   "fuente": "https://www.sri.gob.ec",
@@ -437,5 +437,6 @@
       "fuente": "Código del Trabajo, art. 113",
       "guia": "laboral"
     }
-  ]
+  ],
+  "apoyo_url": "https://buymeacoffee.com/jonathanke2"
 }
