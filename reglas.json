@@ -1,7 +1,8 @@
 {
-  "version": 6,
+  "version": 7,
   "vigente_desde": "2026-01-01",
-  "verificado": false,
+  "verificado": true,
+  "verificado_en": "2026-10-10",
   "fuente": "https://www.sri.gob.ec",
   "dias_por_digito": {
     "1": 10,
@@ -46,7 +47,7 @@
       "tipo_contribuyente": "persona_natural",
       "impuesto": "renta",
       "periodicidad": "anual",
-      "mes": 5,
+      "mes": 3,
       "anio_offset": 1,
       "guia": "renta_persona_natural"
     },
